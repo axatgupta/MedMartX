@@ -7,17 +7,13 @@ def hello():
     return render_template("index.html")
 
 @app.route("/analgesics")
-def pfood():
+def analgesics():
 	return render_template("analgesics.html")
 
 @app.route("/pcare")
 def pcare():
 	print ("1")
 	return render_template("pcare.html")
-
-@app.route("/household")
-def hhold():
-	return render_template("household.html")
 
 @app.route("/login")
 def loadlogin():
@@ -49,6 +45,10 @@ def check():
 @app.route("/register")
 def reg():
 	return render_template("registered.html")
+
+@app.route("/antibiotics")
+def biot():
+	return render_template("antibiotics.html")
 
 if __name__ == "__main__":
     app.run()

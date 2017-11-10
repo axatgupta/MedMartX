@@ -1,9 +1,3 @@
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html>
 
@@ -53,9 +47,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="agile-login">
                 <ul>
-                    <li><a href="registered.html"> Create Account </a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="contact.html">Help</a></li>
+                    <li><a href="{{url_for('reg')}}"> Create Account </a></li>
+                    <li><a href="{{url_for('loadlogin')}}">Login</a></li>
+                    <li><a href="{{url_for('cont')}}">Help</a></li>
                 </ul>
             </div>
             <div class="product_list_header">
@@ -128,13 +122,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </ul> -->
                             </li>
                             <li class="dropdown">
-                                <a href="{{url_for('pfood')}}">Analgesics</a>
+                                <a href="{{url_for('analgesics')}}">Analgesics</a>
                             </li>
                             <li class="dropdown">
                                 <a href="{{url_for('pcare')}}">Personal Care</a>
                             </li>
                             <li class="dropdown">
-                                <a href="{{url_for('hhold')}}">Antipyretics</a>
+                                <a href="{{url_for('biot')}}">Antibiotics</a>
                             </li>
                             <li>
                                 <a href="{{url_for('abt')}}">About</a>
