@@ -45,8 +45,13 @@
             </div>
             <div class="agile-login">
                 <ul>
+                    {%   if not session['username']   %}
                     <li><a href="{{url_for('reg')}}"> Create Account </a></li>
                     <li><a href="{{url_for('loadlogin')}}">Login</a></li>
+                    {%  else  %}
+                    <li><font color="white"> Welcome {{ session['username'] }}</font></li>
+                    <li><a href="http://localhost:5000/logout">Logout</a></li>
+                    {% endif %}
                     <li><a href="{{url_for('cont')}}">Help</a></li>
                 </ul>
             </div>
@@ -99,25 +104,8 @@
                 <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                      <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="{{url_for('hello')}}" class="act">Home</a></li>
-                            <!-- Mega Menu -->
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><!-- <b class="caret"></b> --></a>
-                                <!-- <ul class="dropdown-menu multi-column columns-3">
-                                <div class="row">
-                                    <div class="multi-gd-img">
-                                        <ul class="multi-column-dropdown">
-                                            <h6>All Groceries</h6>
-                                            <li><a href="groceries.html">Dals & Pulses</a></li>
-                                            <li><a href="groceries.html">Almonds</a></li>
-                                            <li><a href="groceries.html">Cashews</a></li>
-                                            <li><a href="groceries.html">Dry Fruit</a></li>
-                                            <li><a href="groceries.html"> Mukhwas </a></li>
-                                            <li><a href="groceries.html">Rice & Rice Products</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </ul> -->
+                            <li class="active">
+                                <a href="{{url_for('hello')}}" class="act">Home</a>
                             </li>
                             <li class="dropdown">
                                 <a href="{{url_for('analgesics')}}">Analgesics</a>
@@ -162,7 +150,7 @@
         <div class="container">
             <h2>Login Form</h2>
             <div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
-                <form>
+                <form method="POST" name="logincheck" action="http://localhost:5000/login">
                     <input type="email" placeholder="Email Address" required name="username">
                     <input type="password" placeholder="Password" required name="passkey">
                     <div class="forgot">
@@ -170,9 +158,10 @@
                     </div>
                     <input type="submit" value="Login">
                 </form>
+                {{session['query']}}
             </div>
             <h4>For New People</h4>
-            <p><a href="registered.html">Register Here</a> (Or) go back to <a href="index.html">Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></p>
+            <p><a href="{{url_for('reg')}}">Register Here</a> (Or) go back to <a href="{{url_for('hello')}}">Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a></p>
         </div>
     </div>
     <!-- //login -->
