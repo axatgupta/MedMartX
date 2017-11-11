@@ -41,7 +41,7 @@
     <div class="agileits_header">
         <div class="container">
             <div class="w3l_offers">
-                <p>SALE UP TO 70% OFF. USE CODE "SALE70%" . <a href="products.html">SHOP NOW</a></p>
+                <p><a href="products.html">SHOP NOW</a></p>
             </div>
             <div class="agile-login">
                 <ul>
@@ -148,7 +148,7 @@
     <!-- checkout -->
     <div class="checkout">
         <div class="container">
-            <h2>Your shopping cart contains: <span>3 Products</span></h2>
+            <h2>Your shopping cart contains:</h2>
             <div class="checkout-right">
                 <table class="timetable_sub">
                     <thead>
@@ -173,8 +173,8 @@
                                 </div>
                             </div>
                         </td>
-                        <td class="invert">Tata Salt</td>
-                        <td class="invert">$290.00</td>
+                        <td class="invert"></td>
+                        <td class="invert"></td>
                         <td class="invert">
                             <div class="rem">
                                 <div class="close1"> </div>
@@ -202,8 +202,8 @@
                                 </div>
                             </div>
                         </td>
-                        <td class="invert">Fortune oil</td>
-                        <td class="invert">$250.00</td>
+                        <td class="invert"></td>
+                        <td class="invert"></td>
                         <td class="invert">
                             <div class="rem">
                                 <div class="close2"> </div>
@@ -231,8 +231,8 @@
                                 </div>
                             </div>
                         </td>
-                        <td class="invert">Aashirvaad atta</td>
-                        <td class="invert">$15.00</td>
+                        <td class="invert"></td>
+                        <td class="invert"></td>
                         <td class="invert">
                             <div class="rem">
                                 <div class="close3"> </div>
@@ -265,22 +265,6 @@
                     <!--quantity-->
                 </table>
             </div>
-            <div class="checkout-left">
-                <div class="checkout-left-basket">
-                    <h4>Continue to basket</h4>
-                    <ul>
-                        <li>Product1 <i>-</i> <span>$15.00 </span></li>
-                        <li>Product2 <i>-</i> <span>$25.00 </span></li>
-                        <li>Product3 <i>-</i> <span>$29.00 </span></li>
-                        <li>Total Service Charges <i>-</i> <span>$15.00</span></li>
-                        <li>Total <i>-</i> <span>$84.00</span></li>
-                    </ul>
-                </div>
-                <div class="checkout-right-basket">
-                    <a href="single.html"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Continue Shopping</a>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
         </div>
     </div>
     <!-- //checkout -->
@@ -290,47 +274,38 @@
             <div class="w3_footer_grids">
                 <div class="col-md-3 w3_footer_grid">
                     <h3>Contact</h3>
+                    
                     <ul class="address">
-                        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span></li>
-                        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-                        <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+                        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>221B Baker Street, <span>London</span></li>
+                        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:yash.malkan@medmart.co.uk">yash.malkan@medmart.co.uk</a></li>
+                        <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+44 98765 43210</li>
                     </ul>
                 </div>
                 <div class="col-md-3 w3_footer_grid">
                     <h3>Information</h3>
-                    <ul class="info">
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="about.html">About Us</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="contact.html">Contact Us</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="short-codes.html">Short Codes</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="faq.html">FAQ's</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Special Products</a></li>
+                    <ul class="info"> 
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('abt')}}">About Us</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('cont')}}">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 w3_footer_grid">
                     <h3>Category</h3>
-                    <ul class="info">
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="groceries.html">Groceries</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="household.html">Household</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="personalcare.html">Personal Care</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="packagedfoods.html">Packaged Foods</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="beverages.html">Beverages</a></li>
+                    <ul class="info"> 
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('hello')}}">Home</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('analgesics')}}">Analgesics</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('biot')}}">Antibiotics</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('pcare')}}">Personal Care</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 w3_footer_grid">
                     <h3>Profile</h3>
-                    <ul class="info">
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="products.html">Store</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="checkout.html">My Cart</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="login.html">Login</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="registered.html">Create Account</a></li>
+                    <ul class="info"> 
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('check')}}">My Cart</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('loadlogin')}}">Login</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('reg')}}">Create Account</a></li>
                     </ul>
                 </div>
                 <div class="clearfix"> </div>
-            </div>
-        </div>
-        <div class="footer-copy">
-            <div class="container">
-                <p>© 2017 Super Market. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
             </div>
         </div>
     </div>
@@ -345,7 +320,7 @@
                 </ul>
             </div>
             <div class="payment-w3ls">
-                <img src="images/card.png" alt=" " class="img-responsive">
+                <img src="{{url_for('static',filename='images/card.png')}}" alt=" " class="img-responsive">
             </div>
             <div class="clearfix"> </div>
         </div>

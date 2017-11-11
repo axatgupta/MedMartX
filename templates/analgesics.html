@@ -6,8 +6,7 @@
     <!-- for-mobile-apps -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Super Market Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <meta name="keywords" content="" />
     <script type="application/x-javascript">
     addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 
@@ -46,12 +45,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <p><a href="{{url_for('prod')}}">SHOP NOW</a></p>
             </div>
             <div class="agile-login">
-               <ul>
-                    {%   if not session['username']   %}
+                <ul>
+                    {% if not session['username'] %}
                     <li><a href="{{url_for('reg')}}"> Create Account </a></li>
                     <li><a href="{{url_for('loadlogin')}}">Login</a></li>
-                    {%  else  %}
-                    <li><font color="white"> Welcome {{ session['username'] }}</font></li>
+                    {% else %}
+                    <li>
+                        <font color="white"> Welcome {{ session['username'] }}</font>
+                    </li>
                     <li><a href="http://localhost:5000/logout">Logout</a></li>
                     {% endif %}
                     <li><a href="{{url_for('cont')}}">Help</a></li>
@@ -144,7 +145,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
     <!-- //breadcrumbs -->
-        <div class="products">
+    <div class="products">
         <div class="container">
             <div class="col-md-4 products-left">
                 <div class="categories">
@@ -525,79 +526,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </div>
                         </div>
                     </div>
-                    <div class="clearfix"> </div>
                 </div>
-                <nav class="numbering">
-                    <ul class="pagination paging">
-                        <li>
-                            <a href="#" aria-label="Previous">
-								<span aria-hidden="true">&laquo;</span>
-							</a>
-                        </li>
-                        <li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-							<span aria-hidden="true">&raquo;</span>
-							</a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
-            <div class="clearfix"> </div>
         </div>
     </div>
-    
     <!-- //footer -->
     <div class="footer">
         <div class="container">
             <div class="w3_footer_grids">
                 <div class="col-md-3 w3_footer_grid">
                     <h3>Contact</h3>
+                    
                     <ul class="address">
-                        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>1234k Avenue, 4th block, <span>New York City.</span></li>
-                        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@example.com</a></li>
-                        <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+1234 567 567</li>
+                        <li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>221B Baker Street, <span>London</span></li>
+                        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:yash.malkan@medmart.co.uk">yash.malkan@medmart.co.uk</a></li>
+                        <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>+44 98765 43210</li>
                     </ul>
                 </div>
                 <div class="col-md-3 w3_footer_grid">
                     <h3>Information</h3>
-                    <ul class="info">
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="about.html">About Us</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="contact.html">Contact Us</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="short-codes.html">Short Codes</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="faq.html">FAQ's</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('prod')}}">Special Products</a></li>
+                    <ul class="info"> 
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('abt')}}">About Us</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('cont')}}">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 w3_footer_grid">
                     <h3>Category</h3>
-                    <ul class="info">
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="groceries.html">Groceries</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="household.html">Household</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="personalcare.html">Personal Care</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="packagedfoods.html">Packaged Foods</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="beverages.html">Beverages</a></li>
+                    <ul class="info"> 
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('hello')}}">Home</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('analgesics')}}">Analgesics</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('biot')}}">Antibiotics</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('pcare')}}">Personal Care</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 w3_footer_grid">
                     <h3>Profile</h3>
-                    <ul class="info">
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('prod')}}">Store</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="checkout.html">My Cart</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="login.html">Login</a></li>
-                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="registered.html">Create Account</a></li>
+                    <ul class="info"> 
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('check')}}">My Cart</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('loadlogin')}}">Login</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="{{url_for('reg')}}">Create Account</a></li>
                     </ul>
                 </div>
                 <div class="clearfix"> </div>
-            </div>
-        </div>
-        <div class="footer-copy">
-            <div class="container">
-                <p>© 2017 Super Market. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
             </div>
         </div>
     </div>
@@ -625,12 +595,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script type="text/javascript">
     $(document).ready(function() {
         /*
-        	var defaults = {
-        	containerID: 'toTop', // fading element id
-        	containerHoverID: 'toTopHover', // fading element hover id
-        	scrollSpeed: 1200,
-        	easingType: 'linear' 
-        	};
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear' 
+            };
         */
 
         $().UItoTop({ easingType: 'easeOutQuart' });

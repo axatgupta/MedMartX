@@ -31,7 +31,6 @@ flag=0
 @app.route("/login", methods=['GET','POST'])
 def yolo():
 	if request.method=="POST":
-
 		user=str(request.form['username'])
 		key=str(request.form['passkey'])
 		flag=0
